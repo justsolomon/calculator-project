@@ -11,7 +11,7 @@ body {
     grid-template-columns: repeat(4, 1fr);
 }
 
-.item {
+button {
     border: 1px solid black;
     display: grid;
     justify-content: center;
@@ -23,9 +23,10 @@ body {
     display: grid;
     grid-column: 1/5;
     justify-content: end;
-    padding: 30px;
+    padding: 20px;
     color: white;
     background-color: black;
+    font-size: 2em;
 }
 
 .key-operator {
