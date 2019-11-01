@@ -10,81 +10,44 @@ let seven = document.querySelector(".seven")
 let eight = document.querySelector(".eight")
 let nine = document.querySelector(".nine")
 let zero = document.querySelector(".zero")
+let decimal = document.querySelector(".decimal")
+let add = document.querySelector(".add")
+let subtract = document.querySelector(".sub")
+let multiply = document.querySelector(".times")
+let divide = document.querySelector(".div")
+let clear = document.querySelector(".clearall")
+let answer = document.querySelector(".key-equal")
 
-pressNum1 = () => {
-    display.textContent = "1";
-}
+one.addEventListener("click", function () {display.textContent += '1'})
 
-pressNum2 = () => {
-    display.textContent = "2";
-}
+two.addEventListener("click", function () {display.textContent += '2'})
 
-pressNum3 = () => {
-    display.textContent = "3";
-}
+three.addEventListener("click", function () {display.textContent += '3'})
 
-pressNum4 = () => {
-    display.textContent = "4";
-}
+four.addEventListener("click", function () {display.textContent += '4'})
 
-pressNum5 = () => {
-    display.textContent = "5";
-}
+five.addEventListener("click", function () {display.textContent += '5'})
 
-pressNum6 = () => {
-    display.textContent = "6";
-}
+six.addEventListener("click", function () {display.textContent += '6'})
 
-pressNum7 = () => {
-    display.textContent = "7";
-}
+seven.addEventListener("click", function () {display.textContent += '7'})
 
-pressNum8 = () => {
-    display.textContent = "8";
-}
+eight.addEventListener("click", function () {display.textContent += '8'})
 
-pressNum9 = () => {
-    display.textContent = "9";
-}
+nine.addEventListener("click", function () {display.textContent += '9'})
 
-pressNum0 = () => {
-    display.textContent = "0";
-}
+zero.addEventListener("click", function () {display.textContent += '0'})
 
-one.addEventListener("click", pressNum1)
+decimal.addEventListener("click", function () {display.textContent += '.'})
 
-two.addEventListener("click", pressNum2)
+add.addEventListener("click", function () {display.textContent += '+'})
 
-three.addEventListener("click", pressNum3)
+subtract.addEventListener("click", function () {display.textContent += '-'})
 
-four.addEventListener("click", pressNum4)
+multiply.addEventListener("click", function () {display.textContent += '*'})
 
-five.addEventListener("click", pressNum5)
+divide.addEventListener("click", function () {display.textContent += '/'})
 
-six.addEventListener("click", pressNum6)
+clear.addEventListener("click", function () {display.textContent = ''})
 
-seven.addEventListener("click", pressNum7)
-
-eight.addEventListener("click", pressNum8)
-
-nine.addEventListener("click", pressNum9)
-
-zero.addEventListener("click", pressNum0)
-// const calculator = document.querySelector(".calculator")
-// const keys = document.querySelector("section")
-
-// const pressKey = () => {
-//     if (!action) console.log("number key");
-//     else if (
-//         action === "add" || 
-//         action === "subtract" ||
-//         action === "multiply" ||
-//         action === "divide") console.log("operator key!");
-//         else if (action === "decimal") console.log("decimal key");
-//         else if (action === "clear") console.log("clear key");
-//         else if(action === "calculate") console.log("equal key")
-//     }
-    
-//     const key = pressKey.target
-//     const action = key.dataset.action
-// keys.addEventListener("click", pressKey)
+answer.addEventListener("click", function () {display.textContent = eval(display.textContent)})
