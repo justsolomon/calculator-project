@@ -19,6 +19,7 @@ for(let i = 0; i < keyOperators.length; i++) {
 window.addEventListener('keydown', function(e) {
 	if (numberArray.includes(Number(e.key))) display.textContent += e.key;
 	else if (operatorArray.includes(e.key)) display.textContent += e.key;
+	else if (e.key === 'Enter') display.textContent = eval(display.textContent);
 })
 
 let decimal = document.querySelector(".decimal")
