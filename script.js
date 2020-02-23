@@ -16,6 +16,10 @@ for(let i = 0; i < keyOperators.length; i++) {
 	})
 }
 
+window.addEventListener('keydown', function(e) {
+	if (numberArray.includes(Number(e.key))) display.textContent += e.key;
+})
+
 let decimal = document.querySelector(".decimal")
 let clear = document.querySelector(".clearall")
 let answer = document.querySelector(".key-equal")
