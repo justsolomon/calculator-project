@@ -19,7 +19,7 @@ button {
     background-color: rgba(56, 53, 53, 0.425);
 }
 
-.calculator_display {
+.calculator-display {
     display: grid;
     grid-column: 1/5;
     justify-content: end;
@@ -51,7 +51,7 @@ button {
     background-color: rgba(56, 53, 53, 0.801);
 }
 
-.calculator_display:hover {
+.calculator-display:hover {
     background-color: black;
 }
 
