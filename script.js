@@ -1,4 +1,4 @@
-const display = document.querySelector(".calculator_display");
+const display = document.querySelector(".calculator-display");
 const numbers = document.querySelectorAll('.number');
 const keyOperators = document.querySelectorAll('.key-operator');
 const numberArray = [7, 8, 9, 4, 5, 6, 1, 2, 3, 0];
