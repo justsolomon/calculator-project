@@ -38,5 +38,6 @@ clear.addEventListener("click", function () {display.textContent = ''})
 deleteEntry.addEventListener('click', function () {display.textContent = display.textContent.slice(0, -1)})
 
 answer.addEventListener("click", function() {
+	answerDisplay.textContent = display.textContent;
 	display.textContent = eval(display.textContent)
 })
