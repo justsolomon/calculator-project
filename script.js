@@ -20,6 +20,9 @@ window.addEventListener('keydown', function(e) {
 	if (numberArray.includes(Number(e.key))) display.textContent += e.key;
 	else if (operatorArray.includes(e.key)) display.textContent += e.key;
 	else if (e.key === 'Enter') display.textContent = eval(display.textContent);
+	else if (e.key === 'Backspace') {
+		display.textContent = display.textContent.slice(0, -1)
+	}
 })
 
 let decimal = document.querySelector(".decimal")
