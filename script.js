@@ -7,8 +7,18 @@ const operatorArray = ['+', '-', '*', '/'];
 
 for(let i = 0; i < numbers.length; i++) {
 	numbers[i].addEventListener('click', function() {
-		if (!answerDisplay.textContent.startsWith('Ans') && answerDisplay.textContent !== '') {
-			answerDisplay.textContent = `Ans = ${display.textContent}`;
+		let displayText = display.textContent;
+		let answerDisplayText = answerDisplay.textContent;
+
+		if ((displayText.includes('+') || displayText.includes('-') || 
+			displayText.includes('*') || displayText.includes('/')) && 
+			answerDisplayText !== '' && !answerDisplayText.startsWith('Ans')) 
+		{
+			answerDisplay.textContent = `Ans = ${displayText.slice(0, -2)}`;
+		} 
+
+		else if (!answerDisplayText.startsWith('Ans') && answerDisplayText !== '') {
+			answerDisplay.textContent = `Ans = ${displayText}`;
 			display.textContent = '';
 		}
 		display.textContent += `${numberArray[i]}`;
