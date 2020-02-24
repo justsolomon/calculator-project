@@ -20,7 +20,7 @@ for(let i = 0; i < keyOperators.length; i++) {
 window.addEventListener('keydown', function(e) {
 	if (numberArray.includes(Number(e.key))) display.textContent += e.key;
 	else if (operatorArray.includes(e.key)) display.textContent += ` ${e.key} `;
-	else if (e.key === 'Enter') display.textContent = eval(display.textContent);
+	else if (e.key === 'Enter') calculateAnswer();
 	else if (e.key === 'Backspace') {
 		display.textContent = display.textContent.slice(0, -1)
 	}
@@ -37,7 +37,9 @@ clear.addEventListener("click", function () {display.textContent = ''})
 
 deleteEntry.addEventListener('click', function () {display.textContent = display.textContent.slice(0, -1)})
 
-answer.addEventListener("click", function() {
+answer.addEventListener("click", calculateAnswer)
+
+function calculateAnswer() {
 	answerDisplay.textContent = display.textContent + ' =';
-	display.textContent = eval(display.textContent)
-})
+	display.textContent = eval(display.textContent);
+}
