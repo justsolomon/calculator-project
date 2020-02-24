@@ -28,9 +28,12 @@ window.addEventListener('keydown', function(e) {
 let decimal = document.querySelector(".decimal")
 let clear = document.querySelector(".clearall")
 let answer = document.querySelector(".key-equal")
+const deleteEntry = document.querySelector('.clear-entry')
 
 decimal.addEventListener("click", function () {display.textContent += '.'})
 
 clear.addEventListener("click", function () {display.textContent = ''})
 
 answer.addEventListener("click", function () {display.textContent = eval(display.textContent)})
+
+deleteEntry.addEventListener('click', function () {display.textContent = display.textContent.slice(0, -1)})
