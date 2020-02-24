@@ -18,7 +18,7 @@ for(let i = 0; i < keyOperators.length; i++) {
 }
 
 window.addEventListener('keydown', function(e) {
-	if (numberArray.includes(Number(e.key))) display.textContent += e.key;
+	if (numberArray.includes(Number(e.key))) addNumber(e.key);
 	else if (operatorArray.includes(e.key)) display.textContent += ` ${e.key} `;
 	else if (e.key === 'Enter') calculateAnswer();
 	else if (e.key === 'Backspace') {
@@ -62,5 +62,5 @@ function addNumber(value) {
 		answerDisplay.textContent = `Ans = ${displayText}`;
 		display.textContent = '';
 	}
-	display.textContent += `${numberArray[value]}`;
+	display.textContent += `${numberArray[value]}` || value;
 }
