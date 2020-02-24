@@ -1,4 +1,4 @@
-const display = document.querySelector(".calculator-display");
+const display = document.querySelector(".workings-display");
 const numbers = document.querySelectorAll('.number');
 const keyOperators = document.querySelectorAll('.key-operator');
 const numberArray = [7, 8, 9, 4, 5, 6, 1, 2, 3, 0];
@@ -34,6 +34,8 @@ decimal.addEventListener("click", function () {display.textContent += '.'})
 
 clear.addEventListener("click", function () {display.textContent = ''})
 
-answer.addEventListener("click", function () {display.textContent = eval(display.textContent)})
-
 deleteEntry.addEventListener('click', function () {display.textContent = display.textContent.slice(0, -1)})
+
+answer.addEventListener("click", function() {
+	display.textContent = eval(display.textContent)
+})
