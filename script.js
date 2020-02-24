@@ -40,6 +40,9 @@ deleteEntry.addEventListener('click', function () {display.textContent = display
 answer.addEventListener("click", calculateAnswer)
 
 function calculateAnswer() {
-	answerDisplay.textContent = display.textContent + ' =';
-	display.textContent = eval(display.textContent);
+	if (display.textContent === '') return;
+	else {
+		answerDisplay.textContent = display.textContent + ' =';
+		display.textContent = eval(display.textContent);
+	}
 }
