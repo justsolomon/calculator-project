@@ -33,6 +33,7 @@ button {
 
 .workings-display {
     font-size: 1.7em;
+    text-align: right;
 }
 
 .answer-display {
