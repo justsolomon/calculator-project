@@ -24,11 +24,22 @@ button {
     grid-column: 1/5;
     justify-content: end;
     padding: 20px;
+    padding-bottom: 15px;
     height: 50px;
     color: white;
     background-color: black;
-    font-size: 2em;
     overflow: hidden;
+}
+
+.workings-display {
+    font-size: 1.7em;
+}
+
+.answer-display {
+    font-size: .6em;
+    color: rgb(220, 220, 220, .9);
+    padding: 0 0 5px 0;
+    text-align: right;
 }
 
 .key-operator {
