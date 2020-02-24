@@ -37,10 +37,15 @@ button {
 
 .key-equal {
     display: grid;
-    grid-row: 3/7;
+    grid-row: 4/7;
     grid-column: 4/4;
     align-items: center;
     background-color: rgba(107, 93, 90, 0.466);
+}
+
+.clear-entry {
+    grid-row: 3;
+    grid-column: 4;
 }
 
 .item:hover {
