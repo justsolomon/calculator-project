@@ -7,6 +7,10 @@ const operatorArray = ['+', '-', '*', '/'];
 
 for(let i = 0; i < numbers.length; i++) {
 	numbers[i].addEventListener('click', function() {
+		if (!answerDisplay.textContent.startsWith('Ans') && answerDisplay.textContent !== '') {
+			answerDisplay.textContent = `Ans = ${display.textContent}`;
+			display.textContent = '';
+		}
 		display.textContent += `${numberArray[i]}`;
 	})
 }
