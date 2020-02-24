@@ -7,21 +7,7 @@ const operatorArray = ['+', '-', '*', '/'];
 
 for(let i = 0; i < numbers.length; i++) {
 	numbers[i].addEventListener('click', function() {
-		let displayText = display.textContent;
-		let answerDisplayText = answerDisplay.textContent;
-
-		if ((displayText.includes('+') || displayText.includes('-') || 
-			displayText.includes('*') || displayText.includes('/')) && 
-			answerDisplayText !== '' && !answerDisplayText.startsWith('Ans')) 
-		{
-			answerDisplay.textContent = `Ans = ${displayText.slice(0, -2)}`;
-		} 
-
-		else if (!answerDisplayText.startsWith('Ans') && answerDisplayText !== '') {
-			answerDisplay.textContent = `Ans = ${displayText}`;
-			display.textContent = '';
-		}
-		display.textContent += `${numberArray[i]}`;
+		addNumber(i);
 	})
 }
 
@@ -59,4 +45,22 @@ function calculateAnswer() {
 		answerDisplay.textContent = display.textContent + ' =';
 		display.textContent = eval(display.textContent);
 	}
+}
+
+function addNumber(value) {
+	let displayText = display.textContent;
+	let answerDisplayText = answerDisplay.textContent;
+
+	if ((displayText.includes('+') || displayText.includes('-') || 
+		displayText.includes('*') || displayText.includes('/')) && 
+		answerDisplayText !== '' && !answerDisplayText.startsWith('Ans')) 
+	{
+		answerDisplay.textContent = `Ans = ${displayText.slice(0, -2)}`;
+	} 
+
+	else if (!answerDisplayText.startsWith('Ans') && answerDisplayText !== '') {
+		answerDisplay.textContent = `Ans = ${displayText}`;
+		display.textContent = '';
+	}
+	display.textContent += `${numberArray[value]}`;
 }
