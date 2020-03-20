@@ -62,5 +62,5 @@ function addNumber(value) {
 		answerDisplay.textContent = `Ans = ${displayText}`;
 		display.textContent = '';
 	}
-	display.textContent += `${numberArray[value]}` || value;
+	display.textContent += value;
 }
